@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        illuminate: ['^10.0', '^12.69']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
+      - run: composer config audit.block-insecure false
+        if: matrix.illuminate == '^10.0'
+      - run: composer update --prefer-dist --no-progress --no-interaction --with "illuminate/support:${{ matrix.illuminate }}"
+      - run: vendor/bin/phpunit --no-coverage

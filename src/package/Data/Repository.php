@@ -2,7 +2,7 @@
 
 namespace PragmaRX\Countries\Package\Data;
 
-use IlluminateAgnostic\Str\Support\Str;
+use Illuminate\Support\Str;
 use PragmaRX\Countries\Package\Services\Cache\Service as Cache;
 use PragmaRX\Countries\Package\Services\Helper;
 use PragmaRX\Countries\Package\Services\Hydrator;
@@ -145,7 +145,7 @@ class Repository
     /**
      * Load countries.
      *
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function loadCountries()
     {
@@ -163,7 +163,7 @@ class Repository
     /**
      * Load countries json file.
      *
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      *
      * @throws \Exception
      */
@@ -198,7 +198,7 @@ class Repository
     /**
      * Get all countries.
      *
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function all()
     {
@@ -208,7 +208,7 @@ class Repository
     /**
      * Get all currencies.
      *
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function currencies()
     {
@@ -305,7 +305,7 @@ class Repository
      *
      * @param  $collection
      * @param  null  $elements
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function hydrate($collection, $elements = null)
     {
@@ -329,7 +329,7 @@ class Repository
      * Find a country timezone.
      *
      * @param  $zoneId
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function findTimezoneTime($zoneId)
     {

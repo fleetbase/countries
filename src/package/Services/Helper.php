@@ -3,7 +3,7 @@
 namespace PragmaRX\Countries\Package\Services;
 
 use Exception;
-use IlluminateAgnostic\Str\Support\Str;
+use Illuminate\Support\Str;
 
 class Helper
 {
@@ -40,7 +40,7 @@ class Helper
      *
      * @param  $file
      * @param  string  $dir
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      *
      * @throws Exception
      */
@@ -67,7 +67,7 @@ class Helper
      * Load json files from dir.
      *
      * @param  $dir
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function loadJsonFiles($dir)
     {

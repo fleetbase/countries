@@ -5,3 +5,5 @@
 /src/data/third-party/
 composer.phar
 composer.lock
+.phpunit.cache
+.phpunit.result.cache
