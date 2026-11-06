@@ -3,7 +3,7 @@
 namespace PragmaRX\Countries\Update;
 
 use Closure;
-use PragmaRX\Coollection\Package\Coollection;
+use PragmaRX\Countries\Package\Support\Coollection;
 use PragmaRX\Countries\Package\Contracts\Config;
 use PragmaRX\Countries\Package\Services\Cache\Service as Cache;
 use PragmaRX\Countries\Package\Services\Command;
@@ -21,7 +21,7 @@ class Updater extends Base
     protected $command;
 
     /**
-     * @param  \PragmaRX\Coollection\Package\Coollection  $countries
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $countries
      */
     protected $_countries;
 
@@ -140,7 +140,7 @@ class Updater extends Base
     }
 
     /**
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function getCountries()
     {
@@ -200,9 +200,9 @@ class Updater extends Base
     /**
      * Add data sources to collection.
      *
-     * @param  \PragmaRX\Coollection\Package\Coollection  $record
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $record
      * @param  string  $source
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function addDataSource($record, $source)
     {
@@ -222,7 +222,7 @@ class Updater extends Base
     /**
      * @param  $result
      * @param  $type
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function addRecordType($result, $type)
     {
@@ -232,8 +232,8 @@ class Updater extends Base
     }
 
     /**
-     * @param  \PragmaRX\Coollection\Package\Coollection  $mledoze
-     * @param  \PragmaRX\Coollection\Package\Coollection  $natural
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $mledoze
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $natural
      * @return array
      */
     public function findCountryByAnyField($mledoze, $natural)
@@ -257,8 +257,8 @@ class Updater extends Base
     }
 
     /**
-     * @param  \PragmaRX\Coollection\Package\Coollection  $on
-     * @param  \PragmaRX\Coollection\Package\Coollection  $by
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $on
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $by
      * @param  $fields
      * @param  $codeField
      * @return array
@@ -281,7 +281,7 @@ class Updater extends Base
      *
      * @param  $dir
      * @param  Closure|null  $makeGroupKeyClosure
-     * @param  \PragmaRX\Coollection\Package\Coollection  $records
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $records
      * @param  string|null  $groupKey
      */
     public function generateAllJsonFiles($dir, $makeGroupKeyClosure, $records, $groupKey)
@@ -320,7 +320,7 @@ class Updater extends Base
      * @param  Closure|null  $makeGroupKeyClosure
      * @param  Closure  $mergeData
      * @param  string  $groupKey
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function generateJsonFiles($data, $dir, $normalizerClosure, $makeGroupKeyClosure, $mergeData, $groupKey = 'cca3')
     {
