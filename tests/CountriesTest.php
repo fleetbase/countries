@@ -3,7 +3,7 @@
 namespace PragmaRX\Countries\Tests\Service;
 
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
-use PragmaRX\Coollection\Package\Coollection;
+use PragmaRX\Countries\Package\Support\Coollection;
 use PragmaRX\Countries\Package\Countries;
 use PragmaRX\Countries\Update\Config as ServiceConfig;
 use PragmaRX\Countries\Update\Helper;
@@ -22,17 +22,20 @@ class CountriesTest extends PHPUnitTestCase
 
     public function testUpdateCountries()
     {
-        if (! function_exists('xdebug_get_code_coverage')) {
-            ini_set('memory_limit', '4096M');
-
-            $config = new ServiceConfig();
-
-            $helper = new Helper($config);
-
-            $updater = new Updater($config, $helper);
-
-            $updater->update();
+        // Downloads third-party data and rewrites src/data, so it only runs on request.
+        if (! getenv('COUNTRIES_RUN_UPDATER')) {
+            $this->markTestSkipped('Set COUNTRIES_RUN_UPDATER=1 to run the data updater.');
         }
+
+        ini_set('memory_limit', '4096M');
+
+        $config = new ServiceConfig();
+
+        $helper = new Helper($config);
+
+        $updater = new Updater($config, $helper);
+
+        $updater->update();
 
         $this->assertTrue(! false);
     }

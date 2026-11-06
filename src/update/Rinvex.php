@@ -3,7 +3,7 @@
 namespace PragmaRX\Countries\Update;
 
 use Exception;
-use PragmaRX\Coollection\Package\Coollection;
+use PragmaRX\Countries\Package\Support\Coollection;
 use PragmaRX\Countries\Package\Support\Base;
 
 class Rinvex extends Base
@@ -42,8 +42,8 @@ class Rinvex extends Base
     /**
      * Fill array with Rinvex usable data.
      *
-     * @param  \PragmaRX\Coollection\Package\Coollection  $natural
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $natural
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function fillRinvexFields($natural)
     {
@@ -85,7 +85,7 @@ class Rinvex extends Base
      * Find the Rinvex country.
      *
      * @param  $item
-     * @return null|\PragmaRX\Coollection\Package\Coollection
+     * @return null|\PragmaRX\Countries\Package\Support\Coollection
      */
     public function findRinvexCountry($item)
     {
@@ -96,7 +96,7 @@ class Rinvex extends Base
      * Find the Rinvex state.
      *
      * @param  $item
-     * @return null|\PragmaRX\Coollection\Package\Coollection
+     * @return null|\PragmaRX\Countries\Package\Support\Coollection
      */
     public function findRinvexStates($item)
     {
@@ -107,7 +107,7 @@ class Rinvex extends Base
      * Find the Rinvex state.
      *
      * @param  $country
-     * @param  \PragmaRX\Coollection\Package\Coollection  $needle
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $needle
      * @return null|Coollection
      */
     public function findRinvexState($country, $needle)
@@ -145,7 +145,7 @@ class Rinvex extends Base
      * Find the Rinvex translation.
      *
      * @param  $result
-     * @return null|\PragmaRX\Coollection\Package\Coollection
+     * @return null|\PragmaRX\Countries\Package\Support\Coollection
      */
     public function findRinvexTranslations($result)
     {
@@ -159,7 +159,7 @@ class Rinvex extends Base
      * @param  Coollection  $rinvex
      * @param  $translation
      * @param  string  $suffix
-     * @return mixed|\PragmaRX\Coollection\Package\Coollection
+     * @return mixed|\PragmaRX\Countries\Package\Support\Coollection
      */
     public function mergeWithRinvex($natural, $rinvex, $translation, $suffix = '_rinvex')
     {
@@ -222,7 +222,7 @@ class Rinvex extends Base
      * Merge state data with rinvex divisions data.
      *
      * @param  $states
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function mergeCountryStatesWithRinvex($states)
     {
@@ -233,7 +233,7 @@ class Rinvex extends Base
 
     /**
      * @param  $state
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      *
      * @throws Exception
      */
@@ -261,11 +261,11 @@ class Rinvex extends Base
     }
 
     /**
-     * @param  \PragmaRX\Coollection\Package\Coollection  $rinvex
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $rinvex
      * @param  $cca3
      * @param  $postal
      * @param  $country
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function rinvexToStateArray($rinvex, $cca3, $postal, $country)
     {

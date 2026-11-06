@@ -7,7 +7,7 @@ class Config
     /**
      * Configuration.
      *
-     * @var \PragmaRX\Coollection\Package\Coollection
+     * @var \PragmaRX\Countries\Package\Support\Coollection
      */
     protected $config;
 
@@ -30,7 +30,7 @@ class Config
 
     /**
      * @param  $key
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function get($key)
     {

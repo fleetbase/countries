@@ -2,7 +2,7 @@
 
 namespace PragmaRX\Countries\Update;
 
-use PragmaRX\Coollection\Package\Coollection;
+use PragmaRX\Countries\Package\Support\Coollection;
 use PragmaRX\Countries\Package\Support\Base;
 
 class Mledoze extends Base
@@ -116,8 +116,8 @@ class Mledoze extends Base
     /**
      * Merge the two countries sources.
      *
-     * @param  \PragmaRX\Coollection\Package\Coollection  $mledoze
-     * @param  \PragmaRX\Coollection\Package\Coollection  $natural
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $mledoze
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $natural
      * @param  string  $suffix
      * @return mixed
      */

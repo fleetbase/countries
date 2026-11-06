@@ -79,7 +79,7 @@ class Natural extends Base
     }
 
     /**
-     * @param  \PragmaRX\Coollection\Package\Coollection  $country
+     * @param  \PragmaRX\Countries\Package\Support\Coollection  $country
      * @return mixed
      */
     public function fixNaturalOddCountries($country)

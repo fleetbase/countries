@@ -92,7 +92,7 @@ class Countries extends Base
      * Build countries collection.
      *
      * @param  $dataDir
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function buildCountriesCoollection($dataDir)
     {

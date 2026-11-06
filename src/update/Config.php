@@ -64,7 +64,7 @@ class Config
 
     /**
      * @param  $key
-     * @return \PragmaRX\Coollection\Package\Coollection
+     * @return \PragmaRX\Countries\Package\Support\Coollection
      */
     public function get($key)
     {
